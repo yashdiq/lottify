@@ -1,6 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as lottie from "lottie-web";
-import { LottieProps } from "./types";
+
+export interface LottieProps {
+  path: string
+  loop?: boolean
+  autoPlay?: boolean
+  width?: number | string
+  height?: number | string
+  style?: React.CSSProperties
+  speed?: number
+  direction?: lottie.AnimationDirection
+}
 
 const Lottie: React.FC<LottieProps> = (props) => {
   const {path, width, height, autoPlay, loop, speed, direction, style} = props
